@@ -1,0 +1,13 @@
+[package]
+name = "cargo-hook"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jack Clayton <jackos@me.com>"]
+license = "MIT/Apache-2.0"
+repository = "https://github.com/jackos/cargo-hook"
+description = "Add a hook to git which will fmt, clippy and test rust code prior to commit"
+readme = "README.md"
+keywords = ["git", "hook", "hooks", "cargo"]
+categories = ["development-tools::cargo-plugins", "development-tools::testing"]
+
+[dependencies]

@@ -56,5 +56,7 @@ fn main() {
     fs::write(&path, HOOK).expect("check git is initialized and you have a folder in .git/hooks");
     let mut perms = fs::metadata(&path).unwrap().permissions();
     perms.set_mode(0o755);
-    fs::set_permissions(path, perms).ok();
+    fs::set_permissions(&path, perms).ok();
+    let path = path.to_string_lossy();
+    println!("git hook written to: {path}");
 }

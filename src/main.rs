@@ -8,7 +8,7 @@ STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g
 echo "---------------------------"
 echo "- ✨  Running clippy   ✨ -"
 echo "---------------------------"
-cargo clippy
+cargo clippy -- -Dwarnings
 LINTER_EXIT_CODE=$?
 
 if [ $LINTER_EXIT_CODE -ne 0 ]; then
